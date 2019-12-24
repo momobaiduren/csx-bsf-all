@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.yh.csx.bsf.core.config.BsfConfiguration,\
+com.yh.csx.bsf.core.config.WebConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+com.yh.csx.bsf.core.initializer.CoreApplicationContextInitializer

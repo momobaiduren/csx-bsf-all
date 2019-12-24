@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.yh.csx.bsf.shardingjdbc.ShardingJdbcConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+com.yh.csx.bsf.shardingjdbc.ShardingJdbcApplicationContextInitializer

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.yh.csx.bsf.elasticsearch.ElasticSearchConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+com.yh.csx.bsf.elasticsearch.initializer.ElasticsearchApplicationContextInitializer

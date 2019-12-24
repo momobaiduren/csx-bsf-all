@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yh.csx.bsf.demo.cat.dao.CustomerMapper" >
+  <resultMap id="BaseResultMap" type="com.yh.csx.bsf.demo.cat.model.Customer" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="customer_number" property="customerNumber" jdbcType="VARCHAR" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" />
+    <result column="first_category_code" property="firstCategoryCode" jdbcType="VARCHAR" />
+    <result column="second_category_code" property="secondCategoryCode" jdbcType="VARCHAR" />
+    <result column="third_category_code" property="thirdCategoryCode" jdbcType="VARCHAR" />
+    <result column="customer_category_id" property="customerCategoryId" jdbcType="INTEGER" />
+    <result column="archive_category" property="archiveCategory" jdbcType="VARCHAR" />
+    <result column="cooperation_mode" property="cooperationMode" jdbcType="VARCHAR" />
+    <result column="social_credit_code" property="socialCreditCode" jdbcType="VARCHAR" />
+    <result column="business_license" property="businessLicense" jdbcType="VARCHAR" />
+    <result column="legal_person_name" property="legalPersonName" jdbcType="VARCHAR" />
+    <result column="legal_person_idcard" property="legalPersonIdcard" jdbcType="VARCHAR" />
+    <result column="registered_capital" property="registeredCapital" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="contact_person" property="contactPerson" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="fax" property="fax" jdbcType="VARCHAR" />
+    <result column="country_code" property="countryCode" jdbcType="VARCHAR" />
+    <result column="post_code" property="postCode" jdbcType="VARCHAR" />
+    <result column="invoice_name" property="invoiceName" jdbcType="VARCHAR" />
+    <result column="invoice_name2" property="invoiceName2" jdbcType="VARCHAR" />
+    <result column="region_province" property="regionProvince" jdbcType="VARCHAR" />
+    <result column="region_province_name" property="regionProvinceName" jdbcType="VARCHAR" />
+    <result column="region_city" property="regionCity" jdbcType="VARCHAR" />
+    <result column="region_area" property="regionArea" jdbcType="VARCHAR" />
+    <result column="address_details" property="addressDetails" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="bank_account_number" property="bankAccountNumber" jdbcType="VARCHAR" />
+    <result column="bank_account_name" property="bankAccountName" jdbcType="VARCHAR" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="bank_number" property="bankNumber" jdbcType="VARCHAR" />
+    <result column="bank_account_number2" property="bankAccountNumber2" jdbcType="VARCHAR" />
+    <result column="company_code" property="companyCode" jdbcType="VARCHAR" />
+    <result column="payment_terms" property="paymentTerms" jdbcType="VARCHAR" />
+    <result column="pay_mode" property="payMode" jdbcType="VARCHAR" />
+    <result column="payment_days" property="paymentDays" jdbcType="VARCHAR" />
+    <result column="plan_sales_amount" property="planSalesAmount" jdbcType="DECIMAL" />
+    <result column="written_amount" property="writtenAmount" jdbcType="DECIMAL" />
+    <result column="b2b_shop_code" property="b2bShopCode" jdbcType="VARCHAR" />
+    <result column="b2b_shop_name" property="b2bShopName" jdbcType="VARCHAR" />
+    <result column="sales_user_id" property="salesUserId" jdbcType="BIGINT" />
+    <result column="sales_user_name" property="salesUserName" jdbcType="VARCHAR" />
+    <result column="taxes_category" property="taxesCategory" jdbcType="VARCHAR" />
+    <result column="sales_province" property="salesProvince" jdbcType="VARCHAR" />
+    <result column="customer_level" property="customerLevel" jdbcType="VARCHAR" />
+    <result column="credit_limit" property="creditLimit" jdbcType="DECIMAL" />
+    <result column="temp_credit_limit" property="tempCreditLimit" jdbcType="DECIMAL" />
+    <result column="temp_begin_time" property="tempBeginTime" jdbcType="TIMESTAMP" />
+    <result column="temp_end_time" property="tempEndTime" jdbcType="TIMESTAMP" />
+    <result column="credit_modulus" property="creditModulus" jdbcType="INTEGER" />
+    <result column="customer_status" property="customerStatus" jdbcType="VARCHAR" />
+    <result column="active_flag" property="activeFlag" jdbcType="BIT" />
+    <result column="sync_flag" property="syncFlag" jdbcType="BIT" />
+    <result column="channel_first_code" property="channelFirstCode" jdbcType="VARCHAR" />
+    <result column="channel_second_code" property="channelSecondCode" jdbcType="VARCHAR" />
+    <result column="sale_organization" property="saleOrganization" jdbcType="VARCHAR" />
+    <result column="distribution_channel" property="distributionChannel" jdbcType="VARCHAR" />
+    <result column="sale_region" property="saleRegion" jdbcType="VARCHAR" />
+    <result column="credit_range" property="creditRange" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="contract_begin_time" property="contractBeginTime" jdbcType="TIMESTAMP" />
+    <result column="contract_end_time" property="contractEndTime" jdbcType="TIMESTAMP" />
+    <result column="customer_nature" property="customerNature" jdbcType="VARCHAR" />
+    <result column="invoice_address" property="invoiceAddress" jdbcType="VARCHAR" />
+    <result column="invoice_address_details" property="invoiceAddressDetails" jdbcType="VARCHAR" />
+    <result column="have_third_party_credit_file" property="haveThirdPartyCreditFile" jdbcType="BIT" />
+    <result column="customer_nature_id" property="customerNatureId" jdbcType="INTEGER" />
+    <result column="archive_category_id" property="archiveCategoryId" jdbcType="INTEGER" />
+    <result column="registered_capital_id" property="registeredCapitalId" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.yh.csx.bsf.demo.cat.model.Customer" extends="BaseResultMap" >
+    <result column="file_path" property="filePath" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, customer_number, customer_name, first_category_code, second_category_code, third_category_code, 
+    customer_category_id, archive_category, cooperation_mode, social_credit_code, business_license, 
+    legal_person_name, legal_person_idcard, registered_capital, phone, contact_person, 
+    email, fax, country_code, post_code, invoice_name, invoice_name2, region_province, 
+    region_province_name, region_city, region_area, address_details, longitude, latitude, 
+    bank_account_number, bank_account_name, bank_name, bank_number, bank_account_number2, 
+    company_code, payment_terms, pay_mode, payment_days, plan_sales_amount, written_amount, 
+    b2b_shop_code, b2b_shop_name, sales_user_id, sales_user_name, taxes_category, sales_province, 
+    customer_level, credit_limit, temp_credit_limit, temp_begin_time, temp_end_time, 
+    credit_modulus, customer_status, active_flag, sync_flag, channel_first_code, channel_second_code, 
+    sale_organization, distribution_channel, sale_region, credit_range, remark, contract_begin_time, 
+    contract_end_time, customer_nature, invoice_address, invoice_address_details, have_third_party_credit_file, 
+    customer_nature_id, archive_category_id, registered_capital_id, create_time, create_by, 
+    update_time, update_by
+  </sql>
+  <sql id="Blob_Column_List" >
+    file_path
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.yh.csx.bsf.demo.cat.model.CustomerExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from demo_customer
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yh.csx.bsf.demo.cat.model.CustomerExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from demo_customer
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from demo_customer
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from demo_customer
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yh.csx.bsf.demo.cat.model.CustomerExample" >
+    delete from demo_customer
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yh.csx.bsf.demo.cat.model.Customer" >
+    insert into demo_customer (id, customer_number, customer_name, 
+      first_category_code, second_category_code, 
+      third_category_code, customer_category_id, 
+      archive_category, cooperation_mode, social_credit_code, 
+      business_license, legal_person_name, legal_person_idcard, 
+      registered_capital, phone, contact_person, 
+      email, fax, country_code, 
+      post_code, invoice_name, invoice_name2, 
+      region_province, region_province_name, region_city, 
+      region_area, address_details, longitude, 
+      latitude, bank_account_number, bank_account_name, 
+      bank_name, bank_number, bank_account_number2, 
+      company_code, payment_terms, pay_mode, 
+      payment_days, plan_sales_amount, written_amount, 
+      b2b_shop_code, b2b_shop_name, sales_user_id, 
+      sales_user_name, taxes_category, sales_province, 
+      customer_level, credit_limit, temp_credit_limit, 
+      temp_begin_time, temp_end_time, credit_modulus, 
+      customer_status, active_flag, sync_flag, 
+      channel_first_code, channel_second_code, sale_organization, 
+      distribution_channel, sale_region, credit_range, 
+      remark, contract_begin_time, contract_end_time, 
+      customer_nature, invoice_address, invoice_address_details, 
+      have_third_party_credit_file, customer_nature_id, 
+      archive_category_id, registered_capital_id, 
+      create_time, create_by, update_time, 
+      update_by, file_path)
+    values (#{id,jdbcType=BIGINT}, #{customerNumber,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, 
+      #{firstCategoryCode,jdbcType=VARCHAR}, #{secondCategoryCode,jdbcType=VARCHAR}, 
+      #{thirdCategoryCode,jdbcType=VARCHAR}, #{customerCategoryId,jdbcType=INTEGER}, 
+      #{archiveCategory,jdbcType=VARCHAR}, #{cooperationMode,jdbcType=VARCHAR}, #{socialCreditCode,jdbcType=VARCHAR}, 
+      #{businessLicense,jdbcType=VARCHAR}, #{legalPersonName,jdbcType=VARCHAR}, #{legalPersonIdcard,jdbcType=VARCHAR}, 
+      #{registeredCapital,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{contactPerson,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, #{countryCode,jdbcType=VARCHAR}, 
+      #{postCode,jdbcType=VARCHAR}, #{invoiceName,jdbcType=VARCHAR}, #{invoiceName2,jdbcType=VARCHAR}, 
+      #{regionProvince,jdbcType=VARCHAR}, #{regionProvinceName,jdbcType=VARCHAR}, #{regionCity,jdbcType=VARCHAR}, 
+      #{regionArea,jdbcType=VARCHAR}, #{addressDetails,jdbcType=VARCHAR}, #{longitude,jdbcType=DECIMAL}, 
+      #{latitude,jdbcType=DECIMAL}, #{bankAccountNumber,jdbcType=VARCHAR}, #{bankAccountName,jdbcType=VARCHAR}, 
+      #{bankName,jdbcType=VARCHAR}, #{bankNumber,jdbcType=VARCHAR}, #{bankAccountNumber2,jdbcType=VARCHAR}, 
+      #{companyCode,jdbcType=VARCHAR}, #{paymentTerms,jdbcType=VARCHAR}, #{payMode,jdbcType=VARCHAR}, 
+      #{paymentDays,jdbcType=VARCHAR}, #{planSalesAmount,jdbcType=DECIMAL}, #{writtenAmount,jdbcType=DECIMAL}, 
+      #{b2bShopCode,jdbcType=VARCHAR}, #{b2bShopName,jdbcType=VARCHAR}, #{salesUserId,jdbcType=BIGINT}, 
+      #{salesUserName,jdbcType=VARCHAR}, #{taxesCategory,jdbcType=VARCHAR}, #{salesProvince,jdbcType=VARCHAR}, 
+      #{customerLevel,jdbcType=VARCHAR}, #{creditLimit,jdbcType=DECIMAL}, #{tempCreditLimit,jdbcType=DECIMAL}, 
+      #{tempBeginTime,jdbcType=TIMESTAMP}, #{tempEndTime,jdbcType=TIMESTAMP}, #{creditModulus,jdbcType=INTEGER}, 
+      #{customerStatus,jdbcType=VARCHAR}, #{activeFlag,jdbcType=BIT}, #{syncFlag,jdbcType=BIT}, 
+      #{channelFirstCode,jdbcType=VARCHAR}, #{channelSecondCode,jdbcType=VARCHAR}, #{saleOrganization,jdbcType=VARCHAR}, 
+      #{distributionChannel,jdbcType=VARCHAR}, #{saleRegion,jdbcType=VARCHAR}, #{creditRange,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{contractBeginTime,jdbcType=TIMESTAMP}, #{contractEndTime,jdbcType=TIMESTAMP}, 
+      #{customerNature,jdbcType=VARCHAR}, #{invoiceAddress,jdbcType=VARCHAR}, #{invoiceAddressDetails,jdbcType=VARCHAR}, 
+      #{haveThirdPartyCreditFile,jdbcType=BIT}, #{customerNatureId,jdbcType=INTEGER}, 
+      #{archiveCategoryId,jdbcType=INTEGER}, #{registeredCapitalId,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{updateBy,jdbcType=VARCHAR}, #{filePath,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yh.csx.bsf.demo.cat.model.Customer" >
+    insert into demo_customer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="customerNumber != null" >
+        customer_number,
+      </if>
+      <if test="customerName != null" >
+        customer_name,
+      </if>
+      <if test="firstCategoryCode != null" >
+        first_category_code,
+      </if>
+      <if test="secondCategoryCode != null" >
+        second_category_code,
+      </if>
+      <if test="thirdCategoryCode != null" >
+        third_category_code,
+      </if>
+      <if test="customerCategoryId != null" >
+        customer_category_id,
+      </if>
+      <if test="archiveCategory != null" >
+        archive_category,
+      </if>
+      <if test="cooperationMode != null" >
+        cooperation_mode,
+      </if>
+      <if test="socialCreditCode != null" >
+        social_credit_code,
+      </if>
+      <if test="businessLicense != null" >
+        business_license,
+      </if>
+      <if test="legalPersonName != null" >
+        legal_person_name,
+      </if>
+      <if test="legalPersonIdcard != null" >
+        legal_person_idcard,
+      </if>
+      <if test="registeredCapital != null" >
+        registered_capital,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="contactPerson != null" >
+        contact_person,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="fax != null" >
+        fax,
+      </if>
+      <if test="countryCode != null" >
+        country_code,
+      </if>
+      <if test="postCode != null" >
+        post_code,
+      </if>
+      <if test="invoiceName != null" >
+        invoice_name,
+      </if>
+      <if test="invoiceName2 != null" >
+        invoice_name2,
+      </if>
+      <if test="regionProvince != null" >
+        region_province,
+      </if>
+      <if test="regionProvinceName != null" >
+        region_province_name,
+      </if>
+      <if test="regionCity != null" >
+        region_city,
+      </if>
+      <if test="regionArea != null" >
+        region_area,
+      </if>
+      <if test="addressDetails != null" >
+        address_details,
+      </if>
+      <if test="longitude != null" >
+        longitude,
+      </if>
+      <if test="latitude != null" >
+        latitude,
+      </if>
+      <if test="bankAccountNumber != null" >
+        bank_account_number,
+      </if>
+      <if test="bankAccountName != null" >
+        bank_account_name,
+      </if>
+      <if test="bankName != null" >
+        bank_name,
+      </if>
+      <if test="bankNumber != null" >
+        bank_number,
+      </if>
+      <if test="bankAccountNumber2 != null" >
+        bank_account_number2,
+      </if>
+      <if test="companyCode != null" >
+        company_code,
+      </if>
+      <if test="paymentTerms != null" >
+        payment_terms,
+      </if>
+      <if test="payMode != null" >
+        pay_mode,
+      </if>
+      <if test="paymentDays != null" >
+        payment_days,
+      </if>
+      <if test="planSalesAmount != null" >
+        plan_sales_amount,
+      </if>
+      <if test="writtenAmount != null" >
+        written_amount,
+      </if>
+      <if test="b2bShopCode != null" >
+        b2b_shop_code,
+      </if>
+      <if test="b2bShopName != null" >
+        b2b_shop_name,
+      </if>
+      <if test="salesUserId != null" >
+        sales_user_id,
+      </if>
+      <if test="salesUserName != null" >
+        sales_user_name,
+      </if>
+      <if test="taxesCategory != null" >
+        taxes_category,
+      </if>
+      <if test="salesProvince != null" >
+        sales_province,
+      </if>
+      <if test="customerLevel != null" >
+        customer_level,
+      </if>
+      <if test="creditLimit != null" >
+        credit_limit,
+      </if>
+      <if test="tempCreditLimit != null" >
+        temp_credit_limit,
+      </if>
+      <if test="tempBeginTime != null" >
+        temp_begin_time,
+      </if>
+      <if test="tempEndTime != null" >
+        temp_end_time,
+      </if>
+      <if test="creditModulus != null" >
+        credit_modulus,
+      </if>
+      <if test="customerStatus != null" >
+        customer_status,
+      </if>
+      <if test="activeFlag != null" >
+        active_flag,
+      </if>
+      <if test="syncFlag != null" >
+        sync_flag,
+      </if>
+      <if test="channelFirstCode != null" >
+        channel_first_code,
+      </if>
+      <if test="channelSecondCode != null" >
+        channel_second_code,
+      </if>
+      <if test="saleOrganization != null" >
+        sale_organization,
+      </if>
+      <if test="distributionChannel != null" >
+        distribution_channel,
+      </if>
+      <if test="saleRegion != null" >
+        sale_region,
+      </if>
+      <if test="creditRange != null" >
+        credit_range,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="contractBeginTime != null" >
+        contract_begin_time,
+      </if>
+      <if test="contractEndTime != null" >
+        contract_end_time,
+      </if>
+      <if test="customerNature != null" >
+        customer_nature,
+      </if>
+      <if test="invoiceAddress != null" >
+        invoice_address,
+      </if>
+      <if test="invoiceAddressDetails != null" >
+        invoice_address_details,
+      </if>
+      <if test="haveThirdPartyCreditFile != null" >
+        have_third_party_credit_file,
+      </if>
+      <if test="customerNatureId != null" >
+        customer_nature_id,
+      </if>
+      <if test="archiveCategoryId != null" >
+        archive_category_id,
+      </if>
+      <if test="registeredCapitalId != null" >
+        registered_capital_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="createBy != null" >
+        create_by,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="updateBy != null" >
+        update_by,
+      </if>
+      <if test="filePath != null" >
+        file_path,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerNumber != null" >
+        #{customerNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null" >
+        #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="firstCategoryCode != null" >
+        #{firstCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="secondCategoryCode != null" >
+        #{secondCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdCategoryCode != null" >
+        #{thirdCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customerCategoryId != null" >
+        #{customerCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="archiveCategory != null" >
+        #{archiveCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="cooperationMode != null" >
+        #{cooperationMode,jdbcType=VARCHAR},
+      </if>
+      <if test="socialCreditCode != null" >
+        #{socialCreditCode,jdbcType=VARCHAR},
+      </if>
+      <if test="businessLicense != null" >
+        #{businessLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null" >
+        #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonIdcard != null" >
+        #{legalPersonIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredCapital != null" >
+        #{registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPerson != null" >
+        #{contactPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="countryCode != null" >
+        #{countryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null" >
+        #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceName != null" >
+        #{invoiceName,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceName2 != null" >
+        #{invoiceName2,jdbcType=VARCHAR},
+      </if>
+      <if test="regionProvince != null" >
+        #{regionProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="regionProvinceName != null" >
+        #{regionProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="regionCity != null" >
+        #{regionCity,jdbcType=VARCHAR},
+      </if>
+      <if test="regionArea != null" >
+        #{regionArea,jdbcType=VARCHAR},
+      </if>
+      <if test="addressDetails != null" >
+        #{addressDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="bankAccountNumber != null" >
+        #{bankAccountNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAccountName != null" >
+        #{bankAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankNumber != null" >
+        #{bankNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAccountNumber2 != null" >
+        #{bankAccountNumber2,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCode != null" >
+        #{companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentTerms != null" >
+        #{paymentTerms,jdbcType=VARCHAR},
+      </if>
+      <if test="payMode != null" >
+        #{payMode,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentDays != null" >
+        #{paymentDays,jdbcType=VARCHAR},
+      </if>
+      <if test="planSalesAmount != null" >
+        #{planSalesAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="writtenAmount != null" >
+        #{writtenAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="b2bShopCode != null" >
+        #{b2bShopCode,jdbcType=VARCHAR},
+      </if>
+      <if test="b2bShopName != null" >
+        #{b2bShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="salesUserId != null" >
+        #{salesUserId,jdbcType=BIGINT},
+      </if>
+      <if test="salesUserName != null" >
+        #{salesUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="taxesCategory != null" >
+        #{taxesCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="salesProvince != null" >
+        #{salesProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="customerLevel != null" >
+        #{customerLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="creditLimit != null" >
+        #{creditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="tempCreditLimit != null" >
+        #{tempCreditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="tempBeginTime != null" >
+        #{tempBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tempEndTime != null" >
+        #{tempEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creditModulus != null" >
+        #{creditModulus,jdbcType=INTEGER},
+      </if>
+      <if test="customerStatus != null" >
+        #{customerStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="activeFlag != null" >
+        #{activeFlag,jdbcType=BIT},
+      </if>
+      <if test="syncFlag != null" >
+        #{syncFlag,jdbcType=BIT},
+      </if>
+      <if test="channelFirstCode != null" >
+        #{channelFirstCode,jdbcType=VARCHAR},
+      </if>
+      <if test="channelSecondCode != null" >
+        #{channelSecondCode,jdbcType=VARCHAR},
+      </if>
+      <if test="saleOrganization != null" >
+        #{saleOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="distributionChannel != null" >
+        #{distributionChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="saleRegion != null" >
+        #{saleRegion,jdbcType=VARCHAR},
+      </if>
+      <if test="creditRange != null" >
+        #{creditRange,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="contractBeginTime != null" >
+        #{contractBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contractEndTime != null" >
+        #{contractEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerNature != null" >
+        #{customerNature,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceAddress != null" >
+        #{invoiceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceAddressDetails != null" >
+        #{invoiceAddressDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="haveThirdPartyCreditFile != null" >
+        #{haveThirdPartyCreditFile,jdbcType=BIT},
+      </if>
+      <if test="customerNatureId != null" >
+        #{customerNatureId,jdbcType=INTEGER},
+      </if>
+      <if test="archiveCategoryId != null" >
+        #{archiveCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="registeredCapitalId != null" >
+        #{registeredCapitalId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null" >
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="filePath != null" >
+        #{filePath,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yh.csx.bsf.demo.cat.model.CustomerExample" resultType="java.lang.Integer" >
+    select count(*) from demo_customer
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update demo_customer
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerNumber != null" >
+        customer_number = #{record.customerNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerName != null" >
+        customer_name = #{record.customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.firstCategoryCode != null" >
+        first_category_code = #{record.firstCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.secondCategoryCode != null" >
+        second_category_code = #{record.secondCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.thirdCategoryCode != null" >
+        third_category_code = #{record.thirdCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerCategoryId != null" >
+        customer_category_id = #{record.customerCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="record.archiveCategory != null" >
+        archive_category = #{record.archiveCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cooperationMode != null" >
+        cooperation_mode = #{record.cooperationMode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.socialCreditCode != null" >
+        social_credit_code = #{record.socialCreditCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessLicense != null" >
+        business_license = #{record.businessLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="record.legalPersonName != null" >
+        legal_person_name = #{record.legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.legalPersonIdcard != null" >
+        legal_person_idcard = #{record.legalPersonIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registeredCapital != null" >
+        registered_capital = #{record.registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phone != null" >
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactPerson != null" >
+        contact_person = #{record.contactPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null" >
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fax != null" >
+        fax = #{record.fax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.countryCode != null" >
+        country_code = #{record.countryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postCode != null" >
+        post_code = #{record.postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoiceName != null" >
+        invoice_name = #{record.invoiceName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoiceName2 != null" >
+        invoice_name2 = #{record.invoiceName2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regionProvince != null" >
+        region_province = #{record.regionProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regionProvinceName != null" >
+        region_province_name = #{record.regionProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regionCity != null" >
+        region_city = #{record.regionCity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regionArea != null" >
+        region_area = #{record.regionArea,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addressDetails != null" >
+        address_details = #{record.addressDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="record.longitude != null" >
+        longitude = #{record.longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="record.latitude != null" >
+        latitude = #{record.latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bankAccountNumber != null" >
+        bank_account_number = #{record.bankAccountNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankAccountName != null" >
+        bank_account_name = #{record.bankAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankName != null" >
+        bank_name = #{record.bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankNumber != null" >
+        bank_number = #{record.bankNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankAccountNumber2 != null" >
+        bank_account_number2 = #{record.bankAccountNumber2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyCode != null" >
+        company_code = #{record.companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paymentTerms != null" >
+        payment_terms = #{record.paymentTerms,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payMode != null" >
+        pay_mode = #{record.payMode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paymentDays != null" >
+        payment_days = #{record.paymentDays,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planSalesAmount != null" >
+        plan_sales_amount = #{record.planSalesAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.writtenAmount != null" >
+        written_amount = #{record.writtenAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.b2bShopCode != null" >
+        b2b_shop_code = #{record.b2bShopCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.b2bShopName != null" >
+        b2b_shop_name = #{record.b2bShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.salesUserId != null" >
+        sales_user_id = #{record.salesUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.salesUserName != null" >
+        sales_user_name = #{record.salesUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taxesCategory != null" >
+        taxes_category = #{record.taxesCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.salesProvince != null" >
+        sales_province = #{record.salesProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerLevel != null" >
+        customer_level = #{record.customerLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creditLimit != null" >
+        credit_limit = #{record.creditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="record.tempCreditLimit != null" >
+        temp_credit_limit = #{record.tempCreditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="record.tempBeginTime != null" >
+        temp_begin_time = #{record.tempBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tempEndTime != null" >
+        temp_end_time = #{record.tempEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.creditModulus != null" >
+        credit_modulus = #{record.creditModulus,jdbcType=INTEGER},
+      </if>
+      <if test="record.customerStatus != null" >
+        customer_status = #{record.customerStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activeFlag != null" >
+        active_flag = #{record.activeFlag,jdbcType=BIT},
+      </if>
+      <if test="record.syncFlag != null" >
+        sync_flag = #{record.syncFlag,jdbcType=BIT},
+      </if>
+      <if test="record.channelFirstCode != null" >
+        channel_first_code = #{record.channelFirstCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.channelSecondCode != null" >
+        channel_second_code = #{record.channelSecondCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.saleOrganization != null" >
+        sale_organization = #{record.saleOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="record.distributionChannel != null" >
+        distribution_channel = #{record.distributionChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.saleRegion != null" >
+        sale_region = #{record.saleRegion,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creditRange != null" >
+        credit_range = #{record.creditRange,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contractBeginTime != null" >
+        contract_begin_time = #{record.contractBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.contractEndTime != null" >
+        contract_end_time = #{record.contractEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.customerNature != null" >
+        customer_nature = #{record.customerNature,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoiceAddress != null" >
+        invoice_address = #{record.invoiceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoiceAddressDetails != null" >
+        invoice_address_details = #{record.invoiceAddressDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="record.haveThirdPartyCreditFile != null" >
+        have_third_party_credit_file = #{record.haveThirdPartyCreditFile,jdbcType=BIT},
+      </if>
+      <if test="record.customerNatureId != null" >
+        customer_nature_id = #{record.customerNatureId,jdbcType=INTEGER},
+      </if>
+      <if test="record.archiveCategoryId != null" >
+        archive_category_id = #{record.archiveCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="record.registeredCapitalId != null" >
+        registered_capital_id = #{record.registeredCapitalId,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createBy != null" >
+        create_by = #{record.createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateBy != null" >
+        update_by = #{record.updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.filePath != null" >
+        file_path = #{record.filePath,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update demo_customer
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_number = #{record.customerNumber,jdbcType=VARCHAR},
+      customer_name = #{record.customerName,jdbcType=VARCHAR},
+      first_category_code = #{record.firstCategoryCode,jdbcType=VARCHAR},
+      second_category_code = #{record.secondCategoryCode,jdbcType=VARCHAR},
+      third_category_code = #{record.thirdCategoryCode,jdbcType=VARCHAR},
+      customer_category_id = #{record.customerCategoryId,jdbcType=INTEGER},
+      archive_category = #{record.archiveCategory,jdbcType=VARCHAR},
+      cooperation_mode = #{record.cooperationMode,jdbcType=VARCHAR},
+      social_credit_code = #{record.socialCreditCode,jdbcType=VARCHAR},
+      business_license = #{record.businessLicense,jdbcType=VARCHAR},
+      legal_person_name = #{record.legalPersonName,jdbcType=VARCHAR},
+      legal_person_idcard = #{record.legalPersonIdcard,jdbcType=VARCHAR},
+      registered_capital = #{record.registeredCapital,jdbcType=VARCHAR},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      contact_person = #{record.contactPerson,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      fax = #{record.fax,jdbcType=VARCHAR},
+      country_code = #{record.countryCode,jdbcType=VARCHAR},
+      post_code = #{record.postCode,jdbcType=VARCHAR},
+      invoice_name = #{record.invoiceName,jdbcType=VARCHAR},
+      invoice_name2 = #{record.invoiceName2,jdbcType=VARCHAR},
+      region_province = #{record.regionProvince,jdbcType=VARCHAR},
+      region_province_name = #{record.regionProvinceName,jdbcType=VARCHAR},
+      region_city = #{record.regionCity,jdbcType=VARCHAR},
+      region_area = #{record.regionArea,jdbcType=VARCHAR},
+      address_details = #{record.addressDetails,jdbcType=VARCHAR},
+      longitude = #{record.longitude,jdbcType=DECIMAL},
+      latitude = #{record.latitude,jdbcType=DECIMAL},
+      bank_account_number = #{record.bankAccountNumber,jdbcType=VARCHAR},
+      bank_account_name = #{record.bankAccountName,jdbcType=VARCHAR},
+      bank_name = #{record.bankName,jdbcType=VARCHAR},
+      bank_number = #{record.bankNumber,jdbcType=VARCHAR},
+      bank_account_number2 = #{record.bankAccountNumber2,jdbcType=VARCHAR},
+      company_code = #{record.companyCode,jdbcType=VARCHAR},
+      payment_terms = #{record.paymentTerms,jdbcType=VARCHAR},
+      pay_mode = #{record.payMode,jdbcType=VARCHAR},
+      payment_days = #{record.paymentDays,jdbcType=VARCHAR},
+      plan_sales_amount = #{record.planSalesAmount,jdbcType=DECIMAL},
+      written_amount = #{record.writtenAmount,jdbcType=DECIMAL},
+      b2b_shop_code = #{record.b2bShopCode,jdbcType=VARCHAR},
+      b2b_shop_name = #{record.b2bShopName,jdbcType=VARCHAR},
+      sales_user_id = #{record.salesUserId,jdbcType=BIGINT},
+      sales_user_name = #{record.salesUserName,jdbcType=VARCHAR},
+      taxes_category = #{record.taxesCategory,jdbcType=VARCHAR},
+      sales_province = #{record.salesProvince,jdbcType=VARCHAR},
+      customer_level = #{record.customerLevel,jdbcType=VARCHAR},
+      credit_limit = #{record.creditLimit,jdbcType=DECIMAL},
+      temp_credit_limit = #{record.tempCreditLimit,jdbcType=DECIMAL},
+      temp_begin_time = #{record.tempBeginTime,jdbcType=TIMESTAMP},
+      temp_end_time = #{record.tempEndTime,jdbcType=TIMESTAMP},
+      credit_modulus = #{record.creditModulus,jdbcType=INTEGER},
+      customer_status = #{record.customerStatus,jdbcType=VARCHAR},
+      active_flag = #{record.activeFlag,jdbcType=BIT},
+      sync_flag = #{record.syncFlag,jdbcType=BIT},
+      channel_first_code = #{record.channelFirstCode,jdbcType=VARCHAR},
+      channel_second_code = #{record.channelSecondCode,jdbcType=VARCHAR},
+      sale_organization = #{record.saleOrganization,jdbcType=VARCHAR},
+      distribution_channel = #{record.distributionChannel,jdbcType=VARCHAR},
+      sale_region = #{record.saleRegion,jdbcType=VARCHAR},
+      credit_range = #{record.creditRange,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      contract_begin_time = #{record.contractBeginTime,jdbcType=TIMESTAMP},
+      contract_end_time = #{record.contractEndTime,jdbcType=TIMESTAMP},
+      customer_nature = #{record.customerNature,jdbcType=VARCHAR},
+      invoice_address = #{record.invoiceAddress,jdbcType=VARCHAR},
+      invoice_address_details = #{record.invoiceAddressDetails,jdbcType=VARCHAR},
+      have_third_party_credit_file = #{record.haveThirdPartyCreditFile,jdbcType=BIT},
+      customer_nature_id = #{record.customerNatureId,jdbcType=INTEGER},
+      archive_category_id = #{record.archiveCategoryId,jdbcType=INTEGER},
+      registered_capital_id = #{record.registeredCapitalId,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      update_by = #{record.updateBy,jdbcType=VARCHAR},
+      file_path = #{record.filePath,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update demo_customer
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_number = #{record.customerNumber,jdbcType=VARCHAR},
+      customer_name = #{record.customerName,jdbcType=VARCHAR},
+      first_category_code = #{record.firstCategoryCode,jdbcType=VARCHAR},
+      second_category_code = #{record.secondCategoryCode,jdbcType=VARCHAR},
+      third_category_code = #{record.thirdCategoryCode,jdbcType=VARCHAR},
+      customer_category_id = #{record.customerCategoryId,jdbcType=INTEGER},
+      archive_category = #{record.archiveCategory,jdbcType=VARCHAR},
+      cooperation_mode = #{record.cooperationMode,jdbcType=VARCHAR},
+      social_credit_code = #{record.socialCreditCode,jdbcType=VARCHAR},
+      business_license = #{record.businessLicense,jdbcType=VARCHAR},
+      legal_person_name = #{record.legalPersonName,jdbcType=VARCHAR},
+      legal_person_idcard = #{record.legalPersonIdcard,jdbcType=VARCHAR},
+      registered_capital = #{record.registeredCapital,jdbcType=VARCHAR},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      contact_person = #{record.contactPerson,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      fax = #{record.fax,jdbcType=VARCHAR},
+      country_code = #{record.countryCode,jdbcType=VARCHAR},
+      post_code = #{record.postCode,jdbcType=VARCHAR},
+      invoice_name = #{record.invoiceName,jdbcType=VARCHAR},
+      invoice_name2 = #{record.invoiceName2,jdbcType=VARCHAR},
+      region_province = #{record.regionProvince,jdbcType=VARCHAR},
+      region_province_name = #{record.regionProvinceName,jdbcType=VARCHAR},
+      region_city = #{record.regionCity,jdbcType=VARCHAR},
+      region_area = #{record.regionArea,jdbcType=VARCHAR},
+      address_details = #{record.addressDetails,jdbcType=VARCHAR},
+      longitude = #{record.longitude,jdbcType=DECIMAL},
+      latitude = #{record.latitude,jdbcType=DECIMAL},
+      bank_account_number = #{record.bankAccountNumber,jdbcType=VARCHAR},
+      bank_account_name = #{record.bankAccountName,jdbcType=VARCHAR},
+      bank_name = #{record.bankName,jdbcType=VARCHAR},
+      bank_number = #{record.bankNumber,jdbcType=VARCHAR},
+      bank_account_number2 = #{record.bankAccountNumber2,jdbcType=VARCHAR},
+      company_code = #{record.companyCode,jdbcType=VARCHAR},
+      payment_terms = #{record.paymentTerms,jdbcType=VARCHAR},
+      pay_mode = #{record.payMode,jdbcType=VARCHAR},
+      payment_days = #{record.paymentDays,jdbcType=VARCHAR},
+      plan_sales_amount = #{record.planSalesAmount,jdbcType=DECIMAL},
+      written_amount = #{record.writtenAmount,jdbcType=DECIMAL},
+      b2b_shop_code = #{record.b2bShopCode,jdbcType=VARCHAR},
+      b2b_shop_name = #{record.b2bShopName,jdbcType=VARCHAR},
+      sales_user_id = #{record.salesUserId,jdbcType=BIGINT},
+      sales_user_name = #{record.salesUserName,jdbcType=VARCHAR},
+      taxes_category = #{record.taxesCategory,jdbcType=VARCHAR},
+      sales_province = #{record.salesProvince,jdbcType=VARCHAR},
+      customer_level = #{record.customerLevel,jdbcType=VARCHAR},
+      credit_limit = #{record.creditLimit,jdbcType=DECIMAL},
+      temp_credit_limit = #{record.tempCreditLimit,jdbcType=DECIMAL},
+      temp_begin_time = #{record.tempBeginTime,jdbcType=TIMESTAMP},
+      temp_end_time = #{record.tempEndTime,jdbcType=TIMESTAMP},
+      credit_modulus = #{record.creditModulus,jdbcType=INTEGER},
+      customer_status = #{record.customerStatus,jdbcType=VARCHAR},
+      active_flag = #{record.activeFlag,jdbcType=BIT},
+      sync_flag = #{record.syncFlag,jdbcType=BIT},
+      channel_first_code = #{record.channelFirstCode,jdbcType=VARCHAR},
+      channel_second_code = #{record.channelSecondCode,jdbcType=VARCHAR},
+      sale_organization = #{record.saleOrganization,jdbcType=VARCHAR},
+      distribution_channel = #{record.distributionChannel,jdbcType=VARCHAR},
+      sale_region = #{record.saleRegion,jdbcType=VARCHAR},
+      credit_range = #{record.creditRange,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      contract_begin_time = #{record.contractBeginTime,jdbcType=TIMESTAMP},
+      contract_end_time = #{record.contractEndTime,jdbcType=TIMESTAMP},
+      customer_nature = #{record.customerNature,jdbcType=VARCHAR},
+      invoice_address = #{record.invoiceAddress,jdbcType=VARCHAR},
+      invoice_address_details = #{record.invoiceAddressDetails,jdbcType=VARCHAR},
+      have_third_party_credit_file = #{record.haveThirdPartyCreditFile,jdbcType=BIT},
+      customer_nature_id = #{record.customerNatureId,jdbcType=INTEGER},
+      archive_category_id = #{record.archiveCategoryId,jdbcType=INTEGER},
+      registered_capital_id = #{record.registeredCapitalId,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      update_by = #{record.updateBy,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yh.csx.bsf.demo.cat.model.Customer" >
+    update demo_customer
+    <set >
+      <if test="customerNumber != null" >
+        customer_number = #{customerNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null" >
+        customer_name = #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="firstCategoryCode != null" >
+        first_category_code = #{firstCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="secondCategoryCode != null" >
+        second_category_code = #{secondCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdCategoryCode != null" >
+        third_category_code = #{thirdCategoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customerCategoryId != null" >
+        customer_category_id = #{customerCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="archiveCategory != null" >
+        archive_category = #{archiveCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="cooperationMode != null" >
+        cooperation_mode = #{cooperationMode,jdbcType=VARCHAR},
+      </if>
+      <if test="socialCreditCode != null" >
+        social_credit_code = #{socialCreditCode,jdbcType=VARCHAR},
+      </if>
+      <if test="businessLicense != null" >
+        business_license = #{businessLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null" >
+        legal_person_name = #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonIdcard != null" >
+        legal_person_idcard = #{legalPersonIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredCapital != null" >
+        registered_capital = #{registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPerson != null" >
+        contact_person = #{contactPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        fax = #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="countryCode != null" >
+        country_code = #{countryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null" >
+        post_code = #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceName != null" >
+        invoice_name = #{invoiceName,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceName2 != null" >
+        invoice_name2 = #{invoiceName2,jdbcType=VARCHAR},
+      </if>
+      <if test="regionProvince != null" >
+        region_province = #{regionProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="regionProvinceName != null" >
+        region_province_name = #{regionProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="regionCity != null" >
+        region_city = #{regionCity,jdbcType=VARCHAR},
+      </if>
+      <if test="regionArea != null" >
+        region_area = #{regionArea,jdbcType=VARCHAR},
+      </if>
+      <if test="addressDetails != null" >
+        address_details = #{addressDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        longitude = #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null" >
+        latitude = #{latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="bankAccountNumber != null" >
+        bank_account_number = #{bankAccountNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAccountName != null" >
+        bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        bank_name = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankNumber != null" >
+        bank_number = #{bankNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAccountNumber2 != null" >
+        bank_account_number2 = #{bankAccountNumber2,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCode != null" >
+        company_code = #{companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentTerms != null" >
+        payment_terms = #{paymentTerms,jdbcType=VARCHAR},
+      </if>
+      <if test="payMode != null" >
+        pay_mode = #{payMode,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentDays != null" >
+        payment_days = #{paymentDays,jdbcType=VARCHAR},
+      </if>
+      <if test="planSalesAmount != null" >
+        plan_sales_amount = #{planSalesAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="writtenAmount != null" >
+        written_amount = #{writtenAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="b2bShopCode != null" >
+        b2b_shop_code = #{b2bShopCode,jdbcType=VARCHAR},
+      </if>
+      <if test="b2bShopName != null" >
+        b2b_shop_name = #{b2bShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="salesUserId != null" >
+        sales_user_id = #{salesUserId,jdbcType=BIGINT},
+      </if>
+      <if test="salesUserName != null" >
+        sales_user_name = #{salesUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="taxesCategory != null" >
+        taxes_category = #{taxesCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="salesProvince != null" >
+        sales_province = #{salesProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="customerLevel != null" >
+        customer_level = #{customerLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="creditLimit != null" >
+        credit_limit = #{creditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="tempCreditLimit != null" >
+        temp_credit_limit = #{tempCreditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="tempBeginTime != null" >
+        temp_begin_time = #{tempBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tempEndTime != null" >
+        temp_end_time = #{tempEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creditModulus != null" >
+        credit_modulus = #{creditModulus,jdbcType=INTEGER},
+      </if>
+      <if test="customerStatus != null" >
+        customer_status = #{customerStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="activeFlag != null" >
+        active_flag = #{activeFlag,jdbcType=BIT},
+      </if>
+      <if test="syncFlag != null" >
+        sync_flag = #{syncFlag,jdbcType=BIT},
+      </if>
+      <if test="channelFirstCode != null" >
+        channel_first_code = #{channelFirstCode,jdbcType=VARCHAR},
+      </if>
+      <if test="channelSecondCode != null" >
+        channel_second_code = #{channelSecondCode,jdbcType=VARCHAR},
+      </if>
+      <if test="saleOrganization != null" >
+        sale_organization = #{saleOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="distributionChannel != null" >
+        distribution_channel = #{distributionChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="saleRegion != null" >
+        sale_region = #{saleRegion,jdbcType=VARCHAR},
+      </if>
+      <if test="creditRange != null" >
+        credit_range = #{creditRange,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="contractBeginTime != null" >
+        contract_begin_time = #{contractBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contractEndTime != null" >
+        contract_end_time = #{contractEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerNature != null" >
+        customer_nature = #{customerNature,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceAddress != null" >
+        invoice_address = #{invoiceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="invoiceAddressDetails != null" >
+        invoice_address_details = #{invoiceAddressDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="haveThirdPartyCreditFile != null" >
+        have_third_party_credit_file = #{haveThirdPartyCreditFile,jdbcType=BIT},
+      </if>
+      <if test="customerNatureId != null" >
+        customer_nature_id = #{customerNatureId,jdbcType=INTEGER},
+      </if>
+      <if test="archiveCategoryId != null" >
+        archive_category_id = #{archiveCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="registeredCapitalId != null" >
+        registered_capital_id = #{registeredCapitalId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null" >
+        update_by = #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="filePath != null" >
+        file_path = #{filePath,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.yh.csx.bsf.demo.cat.model.Customer" >
+    update demo_customer
+    set customer_number = #{customerNumber,jdbcType=VARCHAR},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      first_category_code = #{firstCategoryCode,jdbcType=VARCHAR},
+      second_category_code = #{secondCategoryCode,jdbcType=VARCHAR},
+      third_category_code = #{thirdCategoryCode,jdbcType=VARCHAR},
+      customer_category_id = #{customerCategoryId,jdbcType=INTEGER},
+      archive_category = #{archiveCategory,jdbcType=VARCHAR},
+      cooperation_mode = #{cooperationMode,jdbcType=VARCHAR},
+      social_credit_code = #{socialCreditCode,jdbcType=VARCHAR},
+      business_license = #{businessLicense,jdbcType=VARCHAR},
+      legal_person_name = #{legalPersonName,jdbcType=VARCHAR},
+      legal_person_idcard = #{legalPersonIdcard,jdbcType=VARCHAR},
+      registered_capital = #{registeredCapital,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      contact_person = #{contactPerson,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      fax = #{fax,jdbcType=VARCHAR},
+      country_code = #{countryCode,jdbcType=VARCHAR},
+      post_code = #{postCode,jdbcType=VARCHAR},
+      invoice_name = #{invoiceName,jdbcType=VARCHAR},
+      invoice_name2 = #{invoiceName2,jdbcType=VARCHAR},
+      region_province = #{regionProvince,jdbcType=VARCHAR},
+      region_province_name = #{regionProvinceName,jdbcType=VARCHAR},
+      region_city = #{regionCity,jdbcType=VARCHAR},
+      region_area = #{regionArea,jdbcType=VARCHAR},
+      address_details = #{addressDetails,jdbcType=VARCHAR},
+      longitude = #{longitude,jdbcType=DECIMAL},
+      latitude = #{latitude,jdbcType=DECIMAL},
+      bank_account_number = #{bankAccountNumber,jdbcType=VARCHAR},
+      bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_number = #{bankNumber,jdbcType=VARCHAR},
+      bank_account_number2 = #{bankAccountNumber2,jdbcType=VARCHAR},
+      company_code = #{companyCode,jdbcType=VARCHAR},
+      payment_terms = #{paymentTerms,jdbcType=VARCHAR},
+      pay_mode = #{payMode,jdbcType=VARCHAR},
+      payment_days = #{paymentDays,jdbcType=VARCHAR},
+      plan_sales_amount = #{planSalesAmount,jdbcType=DECIMAL},
+      written_amount = #{writtenAmount,jdbcType=DECIMAL},
+      b2b_shop_code = #{b2bShopCode,jdbcType=VARCHAR},
+      b2b_shop_name = #{b2bShopName,jdbcType=VARCHAR},
+      sales_user_id = #{salesUserId,jdbcType=BIGINT},
+      sales_user_name = #{salesUserName,jdbcType=VARCHAR},
+      taxes_category = #{taxesCategory,jdbcType=VARCHAR},
+      sales_province = #{salesProvince,jdbcType=VARCHAR},
+      customer_level = #{customerLevel,jdbcType=VARCHAR},
+      credit_limit = #{creditLimit,jdbcType=DECIMAL},
+      temp_credit_limit = #{tempCreditLimit,jdbcType=DECIMAL},
+      temp_begin_time = #{tempBeginTime,jdbcType=TIMESTAMP},
+      temp_end_time = #{tempEndTime,jdbcType=TIMESTAMP},
+      credit_modulus = #{creditModulus,jdbcType=INTEGER},
+      customer_status = #{customerStatus,jdbcType=VARCHAR},
+      active_flag = #{activeFlag,jdbcType=BIT},
+      sync_flag = #{syncFlag,jdbcType=BIT},
+      channel_first_code = #{channelFirstCode,jdbcType=VARCHAR},
+      channel_second_code = #{channelSecondCode,jdbcType=VARCHAR},
+      sale_organization = #{saleOrganization,jdbcType=VARCHAR},
+      distribution_channel = #{distributionChannel,jdbcType=VARCHAR},
+      sale_region = #{saleRegion,jdbcType=VARCHAR},
+      credit_range = #{creditRange,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      contract_begin_time = #{contractBeginTime,jdbcType=TIMESTAMP},
+      contract_end_time = #{contractEndTime,jdbcType=TIMESTAMP},
+      customer_nature = #{customerNature,jdbcType=VARCHAR},
+      invoice_address = #{invoiceAddress,jdbcType=VARCHAR},
+      invoice_address_details = #{invoiceAddressDetails,jdbcType=VARCHAR},
+      have_third_party_credit_file = #{haveThirdPartyCreditFile,jdbcType=BIT},
+      customer_nature_id = #{customerNatureId,jdbcType=INTEGER},
+      archive_category_id = #{archiveCategoryId,jdbcType=INTEGER},
+      registered_capital_id = #{registeredCapitalId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR},
+      file_path = #{filePath,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yh.csx.bsf.demo.cat.model.Customer" >
+    update demo_customer
+    set customer_number = #{customerNumber,jdbcType=VARCHAR},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      first_category_code = #{firstCategoryCode,jdbcType=VARCHAR},
+      second_category_code = #{secondCategoryCode,jdbcType=VARCHAR},
+      third_category_code = #{thirdCategoryCode,jdbcType=VARCHAR},
+      customer_category_id = #{customerCategoryId,jdbcType=INTEGER},
+      archive_category = #{archiveCategory,jdbcType=VARCHAR},
+      cooperation_mode = #{cooperationMode,jdbcType=VARCHAR},
+      social_credit_code = #{socialCreditCode,jdbcType=VARCHAR},
+      business_license = #{businessLicense,jdbcType=VARCHAR},
+      legal_person_name = #{legalPersonName,jdbcType=VARCHAR},
+      legal_person_idcard = #{legalPersonIdcard,jdbcType=VARCHAR},
+      registered_capital = #{registeredCapital,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      contact_person = #{contactPerson,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      fax = #{fax,jdbcType=VARCHAR},
+      country_code = #{countryCode,jdbcType=VARCHAR},
+      post_code = #{postCode,jdbcType=VARCHAR},
+      invoice_name = #{invoiceName,jdbcType=VARCHAR},
+      invoice_name2 = #{invoiceName2,jdbcType=VARCHAR},
+      region_province = #{regionProvince,jdbcType=VARCHAR},
+      region_province_name = #{regionProvinceName,jdbcType=VARCHAR},
+      region_city = #{regionCity,jdbcType=VARCHAR},
+      region_area = #{regionArea,jdbcType=VARCHAR},
+      address_details = #{addressDetails,jdbcType=VARCHAR},
+      longitude = #{longitude,jdbcType=DECIMAL},
+      latitude = #{latitude,jdbcType=DECIMAL},
+      bank_account_number = #{bankAccountNumber,jdbcType=VARCHAR},
+      bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_number = #{bankNumber,jdbcType=VARCHAR},
+      bank_account_number2 = #{bankAccountNumber2,jdbcType=VARCHAR},
+      company_code = #{companyCode,jdbcType=VARCHAR},
+      payment_terms = #{paymentTerms,jdbcType=VARCHAR},
+      pay_mode = #{payMode,jdbcType=VARCHAR},
+      payment_days = #{paymentDays,jdbcType=VARCHAR},
+      plan_sales_amount = #{planSalesAmount,jdbcType=DECIMAL},
+      written_amount = #{writtenAmount,jdbcType=DECIMAL},
+      b2b_shop_code = #{b2bShopCode,jdbcType=VARCHAR},
+      b2b_shop_name = #{b2bShopName,jdbcType=VARCHAR},
+      sales_user_id = #{salesUserId,jdbcType=BIGINT},
+      sales_user_name = #{salesUserName,jdbcType=VARCHAR},
+      taxes_category = #{taxesCategory,jdbcType=VARCHAR},
+      sales_province = #{salesProvince,jdbcType=VARCHAR},
+      customer_level = #{customerLevel,jdbcType=VARCHAR},
+      credit_limit = #{creditLimit,jdbcType=DECIMAL},
+      temp_credit_limit = #{tempCreditLimit,jdbcType=DECIMAL},
+      temp_begin_time = #{tempBeginTime,jdbcType=TIMESTAMP},
+      temp_end_time = #{tempEndTime,jdbcType=TIMESTAMP},
+      credit_modulus = #{creditModulus,jdbcType=INTEGER},
+      customer_status = #{customerStatus,jdbcType=VARCHAR},
+      active_flag = #{activeFlag,jdbcType=BIT},
+      sync_flag = #{syncFlag,jdbcType=BIT},
+      channel_first_code = #{channelFirstCode,jdbcType=VARCHAR},
+      channel_second_code = #{channelSecondCode,jdbcType=VARCHAR},
+      sale_organization = #{saleOrganization,jdbcType=VARCHAR},
+      distribution_channel = #{distributionChannel,jdbcType=VARCHAR},
+      sale_region = #{saleRegion,jdbcType=VARCHAR},
+      credit_range = #{creditRange,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      contract_begin_time = #{contractBeginTime,jdbcType=TIMESTAMP},
+      contract_end_time = #{contractEndTime,jdbcType=TIMESTAMP},
+      customer_nature = #{customerNature,jdbcType=VARCHAR},
+      invoice_address = #{invoiceAddress,jdbcType=VARCHAR},
+      invoice_address_details = #{invoiceAddressDetails,jdbcType=VARCHAR},
+      have_third_party_credit_file = #{haveThirdPartyCreditFile,jdbcType=BIT},
+      customer_nature_id = #{customerNatureId,jdbcType=INTEGER},
+      archive_category_id = #{archiveCategoryId,jdbcType=INTEGER},
+      registered_capital_id = #{registeredCapitalId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+  <select id="selectCountByCustomerName" resultType="int">
+        select count(1) from customer
+        where customer_name = #{customerName}
+        <if test="customerId != null and customerId != 0">
+            and id != #{customerId}
+        </if>
+    </select>
+    
+</mapper>
