@@ -20,7 +20,7 @@ ELK的搭建，请参阅[ELK安装部署文档]((https://elkguide.elasticsearch.
 ## bsf elk 集成
 #elk服务的开关,非必须，默认true
 #bsf.elk.enabled=false 
-#elk的服务地址，默认根据bsf.env环境自动设置
+#elk的服务地址
 bsf.elk.destinations= 
 #启动web相关的功能
 bsf.elk.web.enabled=true 

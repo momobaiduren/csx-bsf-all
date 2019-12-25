@@ -8,7 +8,7 @@ BSF集成了自研的监控报警系统，用来监控各个服务系统的性�
 为了更好地支持业务开发，让开发人员从中间件中解放出来，专注业务以提高开发效率。同时，	基础框架集中统一优化中间件相关服务及使用，为开发人员提供方便的基础服务接口及工具。
 
 ## 项目结构规范说明
-```java
+```
 csx-bsf-all 
     -- csx-bsf-core (项目核心类库)
     -- csx-bsf-demo (项目集成使用demo)
@@ -63,22 +63,41 @@ mvn versions:set -DgenerateBackupPoms=false -DnewVersion={version}
 ```
     
 ## 使用说明
+
 1. 依赖引用
-```java
-<dependency>
-   <artifactId>csx-bsf-starter</artifactId>
-   <groupId>com.yh.csx.bsf</groupId>
-   <version>1.7.1-SNAPSHOT</version>
-</dependency>
+
+继承csx-bsf-dependencies
+
+```java 
+	<parent>
+		<groupId>com.yh.csx.bsf</groupId>
+		<artifactId>csx-bsf-dependencies</artifactId>
+		<version>1.7.1-SNAPSHOT</version>
+	</parent>
 ```
-使用BSF框架，依赖csx-bsf-starter即可。
- 
+或者引入依赖 csx-bsf-starter
+
+```java
+	 <dependency>
+	 	<groupId>com.yh.csx.bsf</groupId>
+		<artifactId>csx-bsf-dependencies</artifactId>
+		<version>1.7.1-SNAPSHOT</version>
+		<type>pom</type>
+       <scope>import</scope>
+	 </dependency>
+    <dependency>
+       <artifactId>csx-bsf-starter</artifactId>
+       <groupId>com.yh.csx.bsf</groupId>
+       <version>1.7.1-SNAPSHOT</version>
+    </dependency>
+```
+
 2. Demo程序  
-框架的使用demo，请参考[csx-bsf-demo](csx-bsf-demo)  
-各个组件的使用，请参考相关模块文档。
+    框架的使用demo，请参考[csx-bsf-demo](csx-bsf-demo)  
+    各个组件的使用，请参考相关模块文档。
 
 3. 参考properties配置文件  
- TODO
+    [resources/application.properties](resources/application.properties)
 
 ## 参与贡献
 架构师: 车江毅  

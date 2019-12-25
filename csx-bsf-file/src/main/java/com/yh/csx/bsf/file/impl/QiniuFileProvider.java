@@ -79,6 +79,30 @@ public class QiniuFileProvider extends AbstractFileProvider {
             throw new FileException("七牛上传文件异常", e);
         }
     }
+    /**
+     * 	上传文件
+     *
+     * @param filePath 上传的本地文件名
+     * @param path     上传文件路径
+     * @param name     上传文件名
+     */
+    @Override
+    public String upload(String filePath, String path, String name) {
+    	 try {
+             String token = auth.uploadToken(bucketName);
+             Response response = uploadManager.put(filePath, createFileKey(path, name), token);
+             if (response.statusCode != 200) {
+                 throw new FileException("七牛文件上传异常：" + response.statusCode);
+             }
+             DefaultPutRet putRet = new JsonSerializer().deserialize(response.bodyString(), DefaultPutRet.class);
+             return bucketUrl + putRet.key;
+         } catch (QiniuException e) {
+             throw new FileException("七牛文件服务异常", e);
+         } catch (Exception e) {
+             throw new FileException("七牛上传文件异常", e);
+         }
+    }
+
     @Override
     public boolean delete(String url) {
         String path;
@@ -94,11 +118,9 @@ public class QiniuFileProvider extends AbstractFileProvider {
             return false;
         }
     }
-
-    @Override
+  
     public String info() {
         return "qiniu:"+com.yh.csx.bsf.core.util.StringUtils.nullToEmpty(bucketUrl);
-    }
-
+    } 
 
 }
