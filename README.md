@@ -66,8 +66,7 @@ mvn versions:set -DgenerateBackupPoms=false -DnewVersion={version}
 
 1. 依赖引用
 
-继承csx-bsf-dependencies
-
+    继承csx-bsf-dependencies
 ``` 
     <parent>
         <groupId>com.yh.csx.bsf</groupId>
@@ -75,8 +74,7 @@ mvn versions:set -DgenerateBackupPoms=false -DnewVersion={version}
         <version>1.7.1-SNAPSHOT</version>
     </parent>
 ```
-或者引入依赖 csx-bsf-starter
-
+    或者引入依赖 csx-bsf-starter
 ```
     <dependency>
         <groupId>com.yh.csx.bsf</groupId>
