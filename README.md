@@ -68,23 +68,23 @@ mvn versions:set -DgenerateBackupPoms=false -DnewVersion={version}
 
 继承csx-bsf-dependencies
 
-```java 
-	<parent>
-		<groupId>com.yh.csx.bsf</groupId>
-		<artifactId>csx-bsf-dependencies</artifactId>
-		<version>1.7.1-SNAPSHOT</version>
-	</parent>
+``` 
+    <parent>
+        <groupId>com.yh.csx.bsf</groupId>
+        <artifactId>csx-bsf-dependencies</artifactId>
+        <version>1.7.1-SNAPSHOT</version>
+    </parent>
 ```
 或者引入依赖 csx-bsf-starter
 
-```java
-	 <dependency>
-	 	<groupId>com.yh.csx.bsf</groupId>
-		<artifactId>csx-bsf-dependencies</artifactId>
-		<version>1.7.1-SNAPSHOT</version>
-		<type>pom</type>
-       <scope>import</scope>
-	 </dependency>
+```
+    <dependency>
+        <groupId>com.yh.csx.bsf</groupId>
+        <artifactId>csx-bsf-dependencies</artifactId>
+        <version>1.7.1-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
     <dependency>
        <artifactId>csx-bsf-starter</artifactId>
        <groupId>com.yh.csx.bsf</groupId>
