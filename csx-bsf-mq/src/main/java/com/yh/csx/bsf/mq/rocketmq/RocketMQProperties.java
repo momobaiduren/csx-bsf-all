@@ -26,6 +26,21 @@ public class RocketMQProperties {
      * */
     @Value("${bsf.rocketmq.isUseVIPChannel:false}")
     private Boolean isUseVIPChannel;
+    /**
+     * 	消费线程数量
+     * */
+    @Value("${bsf.rocketmq.consumeThreadMax:20}")
+    private Integer consumeThreadMax;
+    /**
+     * 	消费线程数量
+     * */
+    @Value("${bsf.rocketmq.consumeThreadMin:20}")
+    private Integer consumeThreadMin;
+    /**
+     *	批量消费Size
+     * */
+    @Value("${bsf.rocketmq.consumeMessageBatchMaxSize:1}")
+    private Integer consumeMessageBatchMaxSize;
     
     public static String Project="RocketMQ";
     public static String BSfRocketMQNameSrvaddr="bsf.rocketmq.namesrvaddr";

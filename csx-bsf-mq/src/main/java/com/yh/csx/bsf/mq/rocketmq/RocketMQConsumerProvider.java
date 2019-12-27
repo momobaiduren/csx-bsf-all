@@ -38,6 +38,11 @@ public class RocketMQConsumerProvider extends AbstractConsumerProvider{
             if(rocketMQProperties.getIsUseVIPChannel()!=null) {
             	consumer.setVipChannelEnabled(rocketMQProperties.getIsUseVIPChannel());
             }
+            if(rocketMQProperties.getConsumeThreadMax()!=null&&rocketMQProperties.getConsumeThreadMax()>0)
+            { // Specify the thread max count of consumer,  default the min count equals max count
+            	consumer.setConsumeThreadMin(rocketMQProperties.getConsumeThreadMax()); 
+            	consumer.setConsumeThreadMax(rocketMQProperties.getConsumeThreadMax()); 
+            }
             String filtertag = null;
             // Subscribe one more more topics to consume.
             if(filterTags ==null || filterTags.length==0) {
