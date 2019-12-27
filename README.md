@@ -1,11 +1,11 @@
 # csx-bsf-all
 ## 介绍
-BSF 为 base service framework 的简写，定义为彩食鲜的基础框架,用于基础服务的集成和跟业务无关的基础技术集成。
+BSF 为 base service framework 的简写，定义为永辉彩食鲜技术团队的基础框架,用于基础服务的集成和跟业务无关的基础技术集成。
 
-BSF集成了自研的监控报警系统，用来监控各个服务系统的性能及异常告警。集成并封装Apollo,Rocket MQ，Redis, Elastic Search，ELK，XXLJOB, Sharding JDBC等中间件，提供简易使用的脚手架。
+BSF集成了自研的监控报警，用来监控各个服务系统的性能及异常告警。集成并封装Apollo,Rocket MQ,Redis, Elastic Search,ELK,XXLJOB, Sharding JDBC,Cat,Eureka,七牛云等第三方中间件，提供简易使用的底层框架。
 
 ## 愿景
-为了更好地支持业务开发，让开发人员从中间件中解放出来，专注业务以提高开发效率。同时，	基础框架集中统一优化中间件相关服务及使用，为开发人员提供方便的基础服务接口及工具。
+为了更好地支持业务开发，让开发人员从中间件中解放出来，专注业务以提高开发效率。同时基础框架集中统一优化中间件相关服务及使用，为开发人员提供高性能,更方便的基础服务接口及工具。
 
 ## 项目结构规范说明
 ```
@@ -66,25 +66,23 @@ mvn versions:set -DgenerateBackupPoms=false -DnewVersion={version}
 
 1. 依赖引用
 
-继承csx-bsf-dependencies
-
-```java 
-	<parent>
-		<groupId>com.yh.csx.bsf</groupId>
-		<artifactId>csx-bsf-dependencies</artifactId>
-		<version>1.7.1-SNAPSHOT</version>
-	</parent>
+    继承csx-bsf-dependencies
+``` 
+    <parent>
+        <groupId>com.yh.csx.bsf</groupId>
+        <artifactId>csx-bsf-dependencies</artifactId>
+        <version>1.7.1-SNAPSHOT</version>
+    </parent>
 ```
-或者引入依赖 csx-bsf-starter
-
-```java
-	 <dependency>
-	 	<groupId>com.yh.csx.bsf</groupId>
-		<artifactId>csx-bsf-dependencies</artifactId>
-		<version>1.7.1-SNAPSHOT</version>
-		<type>pom</type>
-       <scope>import</scope>
-	 </dependency>
+    或者引入依赖 csx-bsf-starter
+```
+    <dependency>
+        <groupId>com.yh.csx.bsf</groupId>
+        <artifactId>csx-bsf-dependencies</artifactId>
+        <version>1.7.1-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
     <dependency>
        <artifactId>csx-bsf-starter</artifactId>
        <groupId>com.yh.csx.bsf</groupId>
