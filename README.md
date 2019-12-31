@@ -96,10 +96,3 @@ mvn versions:set -DgenerateBackupPoms=false -DnewVersion={version}
 
 3. 参考properties配置文件  
     [resources/application.properties](resources/application.properties)
-
-## 参与贡献
-架构师: 车江毅  
-开发: 黄兆平,刘建强  
-维护: 王志斌  
-
-##### by 车江毅
